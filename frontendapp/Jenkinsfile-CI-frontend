@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('build docker image for frontendapp') {
+            steps {
+                sh """
+				docker build -t frontendapp-image .
+				"""
+            }
+        }
+    }
+}
