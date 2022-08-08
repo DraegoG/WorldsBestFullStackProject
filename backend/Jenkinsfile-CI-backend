@@ -5,7 +5,7 @@ pipeline {
         stage('build java jar and docker image') {
             steps {
                 sh """
-				docker build -t backendapp-image .
+				docker build -t backendapp-image ./backend/.
 				"""
             }
         }
